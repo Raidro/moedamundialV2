@@ -15,7 +15,6 @@ import { StyleSheet } from 'react-native';
 
 import api from '../../api/api.js';
 
-
 export default class tela_principal extends Component {
 
   constructor(props) {

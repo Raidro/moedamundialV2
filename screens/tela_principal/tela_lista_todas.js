@@ -14,8 +14,6 @@ import {
 
 import { StyleSheet } from 'react-native';
 
-
-
 export default class lista_todas extends Component {
 
     constructor(props) {
@@ -138,6 +136,5 @@ const styles = StyleSheet.create({
         marginLeft: 15,
         marginRight: 15,
     },
-
 
 });
