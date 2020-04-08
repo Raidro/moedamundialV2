@@ -7,12 +7,12 @@ import moment from 'moment';
 import {
     Container,
     Text,
-    Content,   
+    Content,
     Picker,
     DatePicker,
     Card,
     CardItem,
-    Body,   
+    Body,
 } from "native-base";
 
 import { StyleSheet } from 'react-native';
@@ -113,29 +113,30 @@ export default class tela_periodo extends Component {
                 </Card>
 
                 <Content>
+                    <Card style={styles.cardPicker}>
+                        <Picker
+                            mode="dropdown"
+                            style={styles.pickers}
+                            selectedValue={this.buscaPeriodo(this.state.selected)}
+                            onValueChange={this.onValueChange.bind(this)}
 
-                    <Picker
-                        mode="dropdown"
-                        style={styles.pickers}
-                        selectedValue={this.buscaPeriodo(this.state.selected)}
-                        onValueChange={this.onValueChange.bind(this)}
-
-                    >
-                        <Picker.Item label="SELECIONE UMA MOEDA" value="SELECIONE UMA MOEDA" />
-                        <Picker.Item label="USD - DOLAR COMERCIAL" value="USD-BRL" />
-                        <Picker.Item label="USDT - DOLAR TURISTICO" value="USDT-BRL" />
-                        <Picker.Item label="CAD - DOLAR CANADENSE" value="CAD-BRL" />
-                        <Picker.Item label="AUD - DOLAR AUTRALIANO" value="AUD-BRL" />
-                        <Picker.Item label="GBP - LIBRA ESTERLINA" value="GBP-BRL" />
-                        <Picker.Item label="ARS - PESO ARGENTINO" value="ARS-BRL" />
-                        <Picker.Item label="JPY - IENE JAPONES" value="JPY-BRL" />
-                        <Picker.Item label="CHF - FRENCO SUIÇO" value="CHF-BRL" />
-                        <Picker.Item label="CNY - YUAN CHINES" value="CNY-BRL" />
-                        <Picker.Item label="BTC - BITCOIN" value="BTC-BRL" />
-                        <Picker.Item label="LTC - LITECOIN" value="LTC-BRL" />
-                        <Picker.Item label="ETH - ETHEREUM" value="ETH-BRL" />
-                        <Picker.Item label="XRP - RIPPLE" value="XRP-BRL" />
-                    </Picker>
+                        >
+                            <Picker.Item label="SELECIONE UMA MOEDA" value="SELECIONE UMA MOEDA" />
+                            <Picker.Item label="USD - DOLAR COMERCIAL" value="USD-BRL" />
+                            <Picker.Item label="USDT - DOLAR TURISTICO" value="USDT-BRL" />
+                            <Picker.Item label="CAD - DOLAR CANADENSE" value="CAD-BRL" />
+                            <Picker.Item label="AUD - DOLAR AUTRALIANO" value="AUD-BRL" />
+                            <Picker.Item label="GBP - LIBRA ESTERLINA" value="GBP-BRL" />
+                            <Picker.Item label="ARS - PESO ARGENTINO" value="ARS-BRL" />
+                            <Picker.Item label="JPY - IENE JAPONES" value="JPY-BRL" />
+                            <Picker.Item label="CHF - FRENCO SUIÇO" value="CHF-BRL" />
+                            <Picker.Item label="CNY - YUAN CHINES" value="CNY-BRL" />
+                            <Picker.Item label="BTC - BITCOIN" value="BTC-BRL" />
+                            <Picker.Item label="LTC - LITECOIN" value="LTC-BRL" />
+                            <Picker.Item label="ETH - ETHEREUM" value="ETH-BRL" />
+                            <Picker.Item label="XRP - RIPPLE" value="XRP-BRL" />
+                        </Picker>
+                    </Card>
 
                     <Card style={styles.card}>
                         <CardItem header bordered>
@@ -210,11 +211,11 @@ const styles = StyleSheet.create({
 
     },
     pickers: {
-        width: undefined,
-        marginTop: 15,
+        width: undefined,       
         marginLeft: 20,
         marginRight: 20,
     },
+
     inicio: {
         marginTop: 10,
         alignItems: 'center',
@@ -229,7 +230,10 @@ const styles = StyleSheet.create({
         marginLeft: 20,
         marginRight: 20,
     },
-
-
+    cardPicker: {
+        marginTop: 5,
+        marginLeft: 20,
+        marginRight: 20,
+    }
 
 })

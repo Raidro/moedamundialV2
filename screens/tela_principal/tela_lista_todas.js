@@ -8,8 +8,8 @@ import {
     Content,
     Card,
     CardItem,
-    Body
-
+    Body,
+    H3,
 } from "native-base";
 
 import { StyleSheet } from 'react-native';
@@ -50,6 +50,10 @@ export default class lista_todas extends Component {
         return (
             <Container>
                 <Content>
+
+                    <Card style={styles.cardText}>
+                        <H3 style={styles.text}>Lista de todas as moedas</H3>
+                    </Card>
 
                     {this.state.listaTodasMoedas.map((listaTodasMoedas, index) =>
                         <Card key={index} style={styles.card}>
@@ -122,7 +126,18 @@ const styles = StyleSheet.create({
         marginTop: 25,
         marginLeft: 15,
         marginRight: 15,
-    
-      },
+
+    },
+    text: {
+        padding: 15,
+    },
+    cardText: {
+        alignItems: 'center',
+        justifyContent: 'center',
+        marginTop: 25,
+        marginLeft: 15,
+        marginRight: 15,
+    },
+
 
 });

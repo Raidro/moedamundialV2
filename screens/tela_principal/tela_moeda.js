@@ -4,11 +4,11 @@ import {
   Container,
   Text,
   Picker,
-  Content,  
+  Content,
   Card,
-  CardItem,  
-  Body,  
-  Form, 
+  CardItem,
+  Body,
+  Form,
 } from "native-base";
 
 import { StyleSheet } from 'react-native';
@@ -70,30 +70,33 @@ export default class tela_principal extends Component {
 
       <Container>
         <Content>
-          <Form>
-            <Picker
-              mode="dropdown"
-              style={styles.pickers}
-              selectedValue={this.buscaMoeda(this.state.selected)}
-              onValueChange={this.onValueChange.bind(this)}
 
-            >
-              <Picker.Item label="SELECIONE UMA MOEDA" value="SELECIONE UMA MOEDA" />
-              <Picker.Item label="USD - DOLAR COMERCIAL" value="USD-BRL" />
-              <Picker.Item label="USDT - DOLAR TURISTICO" value="USDT-BRL" />
-              <Picker.Item label="CAD - DOLAR CANADENSE" value="CAD-BRL" />
-              <Picker.Item label="AUD - DOLAR AUTRALIANO" value="AUD-BRL" />
-              <Picker.Item label="GBP - LIBRA ESTERLINA" value="GBP-BRL" />
-              <Picker.Item label="ARS - PESO ARGENTINO" value="ARS-BRL" />
-              <Picker.Item label="JPY - IENE JAPONES" value="JPY-BRL" />
-              <Picker.Item label="CHF - FRENCO SUIÇO" value="CHF-BRL" />
-              <Picker.Item label="CNY - YUAN CHINES" value="CNY-BRL" />
-              <Picker.Item label="BTC - BITCOIN" value="BTC-BRL" />
-              <Picker.Item label="LTC - LITECOIN" value="LTC-BRL" />
-              <Picker.Item label="ETH - ETHEREUM" value="ETH-BRL" />
-              <Picker.Item label="XRP - RIPPLE" value="XRP-BRL" />
-            </Picker>
-          </Form>
+          <Card style={styles.cardPicker}>
+            <Form>
+              <Picker
+                mode="dropdown"
+                style={styles.pickers}
+                selectedValue={this.buscaMoeda(this.state.selected)}
+                onValueChange={this.onValueChange.bind(this)}
+
+              >
+                <Picker.Item label="SELECIONE UMA MOEDA" value="SELECIONE UMA MOEDA" />
+                <Picker.Item label="USD - DOLAR COMERCIAL" value="USD-BRL" />
+                <Picker.Item label="USDT - DOLAR TURISTICO" value="USDT-BRL" />
+                <Picker.Item label="CAD - DOLAR CANADENSE" value="CAD-BRL" />
+                <Picker.Item label="AUD - DOLAR AUTRALIANO" value="AUD-BRL" />
+                <Picker.Item label="GBP - LIBRA ESTERLINA" value="GBP-BRL" />
+                <Picker.Item label="ARS - PESO ARGENTINO" value="ARS-BRL" />
+                <Picker.Item label="JPY - IENE JAPONES" value="JPY-BRL" />
+                <Picker.Item label="CHF - FRENCO SUIÇO" value="CHF-BRL" />
+                <Picker.Item label="CNY - YUAN CHINES" value="CNY-BRL" />
+                <Picker.Item label="BTC - BITCOIN" value="BTC-BRL" />
+                <Picker.Item label="LTC - LITECOIN" value="LTC-BRL" />
+                <Picker.Item label="ETH - ETHEREUM" value="ETH-BRL" />
+                <Picker.Item label="XRP - RIPPLE" value="XRP-BRL" />
+              </Picker>
+            </Form>
+          </Card>
 
           <Card style={styles.card}>
             <CardItem header bordered>
@@ -163,33 +166,19 @@ const styles = StyleSheet.create({
   },
   pickers: {
     width: undefined,
-    marginTop: 15,
     marginLeft: 20,
     marginRight: 20,
   },
   card: {
-    marginTop: 50,
+    marginTop: 25,
     marginLeft: 20,
     marginRight: 20,
 
   },
-  title: {
-    marginTop: 40,
-    fontSize: 30,
-    color: 'black',
-
-  },
-
-  subtittle: {
+  cardPicker: {
     marginTop: 15,
-    color: 'black',
-
-  },
-
-  espaceButton: {
-    marginTop: 15
-  },
-  button: {
-    marginTop: 10
+    marginLeft: 20,
+    marginRight: 20,
   }
+
 })
