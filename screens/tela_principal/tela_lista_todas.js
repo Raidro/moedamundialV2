@@ -134,7 +134,7 @@ const styles = StyleSheet.create({
     cardText: {
         alignItems: 'center',
         justifyContent: 'center',
-        marginTop: 25,
+        marginTop: 15,
         marginLeft: 15,
         marginRight: 15,
     },

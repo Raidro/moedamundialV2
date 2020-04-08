@@ -217,7 +217,7 @@ const styles = StyleSheet.create({
     },
 
     inicio: {
-        marginTop: 10,
+        marginTop: 15,
         alignItems: 'center',
         justifyContent: 'center',
         marginLeft: 20,
