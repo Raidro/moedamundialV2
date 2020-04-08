@@ -16,6 +16,10 @@ import {
     Tab,
     TabHeading,
     Icon,
+    Footer,
+    FooterTab,
+
+
 } from "native-base";
 
 import TelaMoeda from './tela_moeda';
@@ -44,17 +48,18 @@ export default class tela_principal extends Component {
                 </Header>
 
                 <Tabs>
-                    <Tab heading="Moeda">
+                    <Tab heading={<TabHeading><Icon name="logo-bitcoin" /><Text>Moeda</Text></TabHeading>}>
                         <TelaMoeda />
                     </Tab>
-                    <Tab heading="Listar Todas">
+                    <Tab heading={<TabHeading><Icon name="list" /><Text>Lista Todas</Text></TabHeading>}>
                         <TelaLista />
                     </Tab>
-                    <Tab heading="Por Periodo">
+                    <Tab heading={<TabHeading><Icon name="calendar" /><Text>Por Periodo</Text></TabHeading>} >
                         <TelaPeriodo />
                     </Tab>
                 </Tabs>
             </Container>
+
 
         );
     }
