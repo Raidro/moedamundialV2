@@ -6,12 +6,12 @@ import {
     Container,
     Text,
     Content,
-    H1,
     Card,
     CardItem,
     Body
 
 } from "native-base";
+
 import { StyleSheet } from 'react-native';
 
 

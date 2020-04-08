@@ -1,18 +1,18 @@
 import React, { Component } from 'react';
+
 import api from '../../api/api.js';
+
 import moment from 'moment';
 
 import {
     Container,
     Text,
-    Content,
-    H1,
+    Content,   
     Picker,
     DatePicker,
     Card,
     CardItem,
-    Body,
-    Button
+    Body,   
 } from "native-base";
 
 import { StyleSheet } from 'react-native';
@@ -137,7 +137,7 @@ export default class tela_periodo extends Component {
                         <Picker.Item label="XRP - RIPPLE" value="XRP-BRL" />
                     </Picker>
 
-                    <Card>
+                    <Card style={styles.card}>
                         <CardItem header bordered>
                             <Text>{this.state.nome}</Text>
                         </CardItem>
@@ -204,7 +204,7 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
     },
     card: {
-        marginTop: 50,
+        marginTop: 15,
         marginLeft: 20,
         marginRight: 20,
 
@@ -219,11 +219,17 @@ const styles = StyleSheet.create({
         marginTop: 10,
         alignItems: 'center',
         justifyContent: 'center',
+        marginLeft: 20,
+        marginRight: 20,
     },
     fim: {
         marginTop: 5,
         alignItems: 'center',
         justifyContent: 'center',
-    }
+        marginLeft: 20,
+        marginRight: 20,
+    },
+
+
 
 })

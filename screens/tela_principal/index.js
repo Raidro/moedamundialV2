@@ -19,9 +19,14 @@ import {
 } from "native-base";
 
 import TelaMoeda from './tela_moeda';
+
 import TelaLista from './tela_lista_todas';
+
 import TelaPeriodo from './tela_por_periodo';
 
+import { StyleSheet } from 'react-native';
+
+console.disableYellowBox = true
 
 export default class tela_principal extends Component {
 
@@ -30,9 +35,9 @@ export default class tela_principal extends Component {
 
             <Container>
 
-                <Header>
-                    <Body>
-                        <Title>
+                <Header >
+                    <Body style={styles.body}>
+                        <Title style={styles.title}>
                             World Coins
                         </Title>
                     </Body>
@@ -54,4 +59,18 @@ export default class tela_principal extends Component {
         );
     }
 }
+
+const styles = StyleSheet.create({
+
+    body: {
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
+    title: {
+
+        fontSize: 25,
+
+    },
+
+})
 

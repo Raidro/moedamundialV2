@@ -4,23 +4,12 @@ import {
   Container,
   Text,
   Picker,
-  Content,
-  Button,
+  Content,  
   Card,
-  CardItem,
-  Header,
-  Body,
-  Title,
-  Form,
-  Tabs,
-  Tab,
-  TabHeading,
-  Icon,
+  CardItem,  
+  Body,  
+  Form, 
 } from "native-base";
-
-import Tab1 from './tela_moeda';
-import Tab2 from './tela_lista_todas';
-import Tab3 from './tela_por_periodo';
 
 import { StyleSheet } from 'react-native';
 
@@ -85,7 +74,6 @@ export default class tela_principal extends Component {
             <Picker
               mode="dropdown"
               style={styles.pickers}
-              //selectedValue={this.state.selected}
               selectedValue={this.buscaMoeda(this.state.selected)}
               onValueChange={this.onValueChange.bind(this)}
 
