@@ -1,28 +1,18 @@
 {
   "expo": {
-    "name": "HelloWorld",
-    "slug": "world-coins",
-    "platforms": [
-      "ios",
-      "android",
-      "web"
-    ],
-    "version": "1.0.0",
-    "orientation": "portrait",
-    "icon": "./assets/icon.png",
-    "splash": {
-      "image": "./assets/splash.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
-    },
-    "updates": {
-      "fallbackToCacheTimeout": 0
-    },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
-    "ios": {
-      "supportsTablet": true
-    }
+   "name": "World Coins",
+   "icon": "./assets/icon.png",
+   "version": "2.0.0",
+   "slug": "World-coins",
+   "sdkVersion": "37.0.0",
+   "splash": {
+    "image": "./assets/splash.png",
+    "resizeMode": "contain",
+    "backgroundColor": "#ffffff"
+  },   
+   "android": {
+     "package": "com.raidro.worldcoins",
+     "versionCode": 1
+   }
   }
 }
